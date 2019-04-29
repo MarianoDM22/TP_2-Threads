@@ -2,7 +2,7 @@
 
 # Diferencia entre Runnable y Thread
 
-# Runnable (interfaz) Thread (clase)
+Runnable (interfaz) Thread (clase)
 
 Runnable es sólo una interfaz que necesita para instanciar un hilo para contenerlo. 
 Mientras que Thread contiene ya la capacidad de generar un hilo. 
