@@ -28,7 +28,7 @@ Un thread puede presentar cuatro estados distintos:
 
 4. Muerto (Dead): La forma habitual de que un thread muera es finalizando el método run(). También puede llamarse al método stop() de la clase Thread, aunque dicho método es considerado “peligroso” y no se debe utilizar.
 
-#Explique los metodos[start, sleep, yield, join]
+# Explique los metodos[start, sleep, yield, join]
 
 start (): se usa para crear una pila de llamadas separada para el hilo. Se crea una pila de llamadas por separado y, a continuación, JVM llama a run ().
 
