@@ -32,8 +32,8 @@ Un thread puede presentar cuatro estados distintos:
 
 start (): se usa para crear una pila de llamadas separada para el hilo. Se crea una pila de llamadas por separado y, a continuación, JVM llama a run ().
 
-yield(): significa que el Thread no está haciendo nada particularmente importante y, si es necesario ejecutar otros threads o procesos, deberían ejecutarse. De lo contrario, el thread actual continuará ejecutándose.
-
 sleep (): este método hace que el thread que se está ejecutando se duerma durante la cantidad especificada de milisegundos.
+
+yield(): significa que el Thread no está haciendo nada particularmente importante y, si es necesario ejecutar otros threads o procesos, deberían ejecutarse. De lo contrario, el thread actual continuará ejecutándose.
 
 join(): se usa para unir el inicio de la ejecución de un thread al final de la ejecución de otro thread, de manera que un thread no comienza a ejecutarse hasta que otro thread finaliza. Si se llama a join () en una instancia de Thread, el hilo actualmente en ejecución se bloqueará hasta que la instancia de Thread haya terminado de ejecutarse
