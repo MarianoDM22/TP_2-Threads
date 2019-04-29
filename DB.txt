@@ -1,0 +1,22 @@
+
+create database if not exists tp_2;
+
+use tp_2;
+
+create table if not exists Palabras(
+id int auto_increment not null,
+palabra varchar(50),
+longitud int not null default 0,
+constraint pk_id_palabra primary key (id));
+     
+create table if not exists Ganadores(
+id int auto_increment not null,
+nombre varchar(50),
+palabra varchar(50),
+fecha date,
+constraint pk_id_ganador primary key(id));
+
+select * from Palabras; 
+select * from Ganadores;
+
+insert into Palabras (palabra, longitud) values ('murcielago', 10), ('cascada', 7), ('luz', 3), ('programar', 9);
