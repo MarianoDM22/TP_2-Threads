@@ -30,7 +30,7 @@ public class Game {
         disponible = true;
         turno = true;
 
-        while (turno && jugador.isGanador()){
+        while (turno && !jugador.isGanador()){
             turno = jugarLetra(jugador, jugador.letraRandom());
 
             evaluarWin(jugador);
@@ -61,13 +61,19 @@ public class Game {
         return retorno;
     }
 
+    public void presentarJuego(Jugador jugador1, Jugador jugador2)
+    {
+        System.out.println(jugador1.getNombre() + " VS " + jugador2.getNombre());
+        System.out.println("La palabra sera: " + palabra.getPalabra() + "\n");
+    }
+
     public void evaluarWin(Jugador jugador)
     {
         if (this.palabra.getLongitud() == 0)
         {
             System.out.println(jugador.getNombre() + " GANASTE, la palabra era: " + palabra.getPalabra());
             jdbc.insertarGanador(jugador, palabra);
-            jugador.setGanador(false);
+            jugador.setGanador(true);
         }
     }
 

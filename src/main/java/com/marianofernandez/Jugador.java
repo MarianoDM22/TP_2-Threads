@@ -6,7 +6,7 @@ import org.apache.commons.lang3.ArrayUtils;
 public class Jugador extends Thread {
 
     public static  final int totalVidas = 8;
-    private static boolean ganador = true;
+    private static boolean ganador = false;
 
     String nombre;
     int vidas;
@@ -46,10 +46,13 @@ public class Jugador extends Thread {
     }
 
     public void run() {
-        while (this.vidas > 0 && ganador){
-            game.jugar(this);
+
+        while (this.vidas > 0 && !ganador)
+        {
+                game.jugar(this);
         }
-        if (this.vidas == 0 || !ganador){
+        if (this.vidas == 0 || ganador)
+        {
             this.interrupt();
         }
     }
